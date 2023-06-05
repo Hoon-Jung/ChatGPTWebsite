@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <form method="POST">
+      <input type="text" name="message">
+      <button type="submit" name="send">Send</button>
+    </form>
+
+    {% if result %}
+        {% for index in result %}
+          {% for msg in index %}
+            {{ msg }}
+          {% endfor %}
+        <br>
+        {% endfor %}
+    {% endif %}
+  </body>
+</html>
